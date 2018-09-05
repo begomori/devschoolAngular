@@ -5,40 +5,39 @@ import { Component, OnInit, Input} from '@angular/core';
   template: 
   `
   <div [ngStyle]="{'background-color':'#D3D3D3'}">
-    <h1 class="text-center">{{ translate('welcome') }}</h1>
-    <p class="text-center">{{ translate('intro') }}</p>
+    <h1 class="text-center">{{ translate('Bienvenido') }}</h1>
+    <p class="text-center">{{ translate('TextoATraducir') }}</p>
   </div>
   `
 })
 export class WelcomeComponent {
 
-      // nos entra la información del lenguaje desde el componente language-component, que tiene un emiter
+      // nos entra la información del lenguaje desde el componente language-selector, que tiene un emiter
       @Input() language: string;
       // declaración del mapa que guardará los textos a traducir
-      translations: Map <string, object>;
+      text: Map <string, object>;
 
       // constructor donde definimos el mapa con los textos según el idioma seleccionado
       constructor() {
-        this.translations = new Map();
-        this.translations.set('welcome', {
+        this.text = new Map();
+        this.text.set('Bienvenido', {
           en: 'Welcome to DevShop!',
           es: 'Bienvenido a DevShop!',
           va: 'Benvingut a DevShop!'
         });
 
-        this.translations.set('intro', {
+        this.text.set('TextoATraducir', {
           en: 'Where you can buy anything you imaging',
           es: 'Donde puedes comprar cualquier cosa que imagines',
           va: 'On pots comprar qualsevol cosa que imagines'
         });
       }
 
-      ngOnInit() {
-
-      }
-
-      translate(translationKey: string): string {
-        const translation = this.translations.get(translationKey);
-        return translation[this.language] ? translation[this.language] : translationKey;
+      // funcion que se encarga de traducir segun el lenguaje que nos llega del nav-bar 
+      // (que a su vez nos llega del language-selector), por defecto el texto será la propia
+      // palabra clave del map
+      translate(keyMap: string){
+        const translation = this.text.get(keyMap);
+        return translation[this.language] ? translation[this.language] : keyMap;
     }
 }

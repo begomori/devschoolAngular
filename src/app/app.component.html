@@ -1,24 +1,2 @@
-<dev-navbar (languageChange)="language = $event"></dev-navbar>
+<dev-navbar (changeLanguage)="language = $event"></dev-navbar>
 <dev-welcome [language]="language"></dev-welcome>
-<!--EJERCICIOS HECHOS EN CLASE -->
-<!-- <div style="text-align:center">
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h1>Componente padre</h1>
-<p>{{ name.concat(' es chachi').toUpperCase() }}</p>
-<p>{{getYourName('Bego')}}</p>
-<p>Vamos a multiplicar {{numero}} * 10 = {{numero*10}}</p>
-<ul>
-    <li *ngFor="let numero of numeros">
-      <b>{{ numero.title }}</b>
-      <p *ngIf="numero.value > 5">{{ numero.value }}</p>
-    </li>
-</ul>
-<input [ngModel]="inputValue" (ngModelChange)="onValueChange($event)" type="text" />
-<h3>{{ inputValue }}</h3>
-
-<dev-hello [name]="name" [nombre]="miNombre" [apellido1]="miApellido1"  [apellido2]="miApellido2"
-(sonClick) ="onClock($event)">
-</dev-hello>
-<dev-componente-a></dev-componente-a>
-<dev-componente-b></dev-componente-b> -->
