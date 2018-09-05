@@ -3,17 +3,11 @@ import { NgModule } from '@angular/core';
  import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello/hello.component';
-import { ComponenteBComponent } from './componente-b/componente-b.component';
-import { ComponenteAComponent } from './componente-a/componente-a.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent,
-    ComponenteBComponent,
-    ComponenteAComponent,
     NavbarComponent,
     WelcomeComponent
   ],

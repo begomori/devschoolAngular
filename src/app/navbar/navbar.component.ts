@@ -25,6 +25,7 @@ export class NavbarComponent {
 
   links: string[];
   idiomas: any;
+  selectedLanguage: string;
 
   constructor() {
     this.links = ['Home', 'Favourites', 'Profile'];
@@ -36,11 +37,10 @@ export class NavbarComponent {
   }
 
   // al cambiar el selector, enviar el idioma a los demás componentes...
-  @Output() changeLanguage: EventEmitter<string> = new EventEmitter<string>();
-  selectedLanguage: string;
+  @Output() onChangeLanguage = new EventEmitter<string>();
 
   onChange() {
-    this.changeLanguage.emit(this.selectedLanguage);
+    this.onChangeLanguage.emit(this.selectedLanguage);
   }
 
 }
