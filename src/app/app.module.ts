@@ -8,6 +8,7 @@ import { ComponenteBComponent } from './componente-b/componente-b.component';
 import { ComponenteAComponent } from './componente-a/componente-a.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     ComponenteBComponent,
     ComponenteAComponent,
     NavbarComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    LanguageSelectorComponent
   ],
   imports: [
     BrowserModule, FormsModule

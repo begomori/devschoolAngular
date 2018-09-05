@@ -1,17 +1,20 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-
+import { Component } from '@angular/core';
+/*
 interface MyType {
   value: number,
   title: string
 }
-
+*/
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+    title = 'devschool';
+    language: string;
 
+  /*
   name = 'Angular';
   miNombre = 'Bego';
   miApellido1 = 'Morillas';
@@ -47,6 +50,5 @@ export class AppComponent {
 
   onValueChange(newValue) {
     console.log(newValue);
-  }
-
+  } */
 }
