@@ -1,11 +1,11 @@
 <div class="container">
-  <h2>Item List</h2>
+  <h2>{{ 'items-list' | translate : language}}</h2>
   <div class="row">
     <ul class="list-group-item">
         <li class="list-group-item" *ngFor="let item of items" (click)="onSelect(item)">
             <span>{{item.name}} </span>
             <span>{{ item.price | currency : item.currency }} </span>
-            <span>Disponible: {{ item.available }}</span>
+            <span>{{'available' | translate: language }} {{ item.available }}</span>
         </li>
       </ul>
   </div>

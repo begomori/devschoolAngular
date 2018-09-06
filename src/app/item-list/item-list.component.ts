@@ -11,6 +11,7 @@ export class ItemListComponent {
   items: Item[];
 
   @Output() selectedItem: EventEmitter<Item>;
+  @Input() language: string;
 
   constructor() {
     this.selectedItem = new EventEmitter(); //lo mandaré al componente item-details
