@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Item List</h2>
+  <div class="row">
+    <ul class="list-group-item">
+        <li class="list-group-item" *ngFor="let item of items" (click)="onSelect(item)">
+            <span>{{item.name}} </span>
+            <span>{{ item.price | currency : item.currency }} </span>
+            <span>Disponible: {{ item.available }}</span>
+        </li>
+      </ul>
+  </div>
+</div>

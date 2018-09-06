@@ -5,11 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ItemListComponent } from './item-list/item-list.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ItemListComponent,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule, FormsModule
