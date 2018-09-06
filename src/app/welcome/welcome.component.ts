@@ -4,7 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'dev-welcome',
   template:
     `
-  <div [ngStyle]="{'background-color':'#D3D3D3'}">
+  <div [ngStyle]="{'background-color':'#D3D3D3'}" class="xl">
     <h1 class="text-center">{{ translate('Bienvenido') }}</h1>
     <p class="text-center">{{ translate('TextoATraducir') }}</p>
   </div>
