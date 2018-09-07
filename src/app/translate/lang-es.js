@@ -4,5 +4,12 @@ export const es = {
     "intro": "Donde puedes comprar cualquier cosa que imagines",
     "items-list": "Lista de items",
     "show-available": "Mostrar sólo los disponibles",
-    "available": "Disponible: "
+    "available": "Disponible: ",
+    "item-detail-title": "Detalle del producto",
+    "price-text": "Precio: ",
+    "name-text": "Nombre del producto: ",
+    "description-text": "Descripción: ",
+    "available-text": "Disponible",
+    "not-available-text": "Agotado!",
+    "checkbox-available": "Mostrar sólo disponibles: "
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Item } from './interface/item';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = 'devschool';
     language: string;
+    item: Item;
 }

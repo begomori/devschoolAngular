@@ -1,12 +1,17 @@
 <div class="container">
-  <h2>{{ 'items-list' | translate : language}}</h2>
-  <div class="row">
-    <ul class="list-group-item">
-        <li class="list-group-item" *ngFor="let item of items" (click)="onSelect(item)">
-            <span>{{item.name}} </span>
-            <span>{{ item.price | currency : item.currency }} </span>
-            <span>{{'available' | translate: language }} {{ item.available }}</span>
-        </li>
-      </ul>
+  <h3>{{ 'items-list' | translate : language}}</h3>
+  <div>{{ 'checkbox-available' | translate : language }}
+      <input type="checkbox" [(ngModel)]="filterActive" />
   </div>
-</div>
+  <span>
+      Filtar por texto:
+    <input type="text" [(ngModel)]="filterText">
+  </span>
+  <div class="row">
+        <ul class="list-group-item">
+          <li class="list-group-item" *ngFor="let item of items | filterItems: filterActive : filterText" [class.disabled]="!item.available" (click)="onSelectedItem(item)">
+              <span>{{item.name}} </span>
+          </li>
+        </ul>
+  </div>
+  </div>

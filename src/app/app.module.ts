@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
- import { FormsModule } from '@angular/forms';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { TranslatePipe } from './translate/translate-pipe';
+import { FilterItemsPipe } from './filter-pipe/filter-pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { TranslatePipe } from './translate/translate-pipe';
     WelcomeComponent,
     ItemListComponent,
     ItemDetailsComponent,
-    TranslatePipe
+    TranslatePipe,
+    FilterItemsPipe,
   ],
   imports: [
     BrowserModule, FormsModule

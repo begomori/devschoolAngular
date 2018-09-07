@@ -1,3 +1,11 @@
-<dev-navbar (onChangeLanguage)="language = $event"></dev-navbar>
-<dev-welcome [language]="language"></dev-welcome>
-<dev-item-list [language]="language"></dev-item-list>
+<dev-navbar (languageSelected)="language = $event"></dev-navbar>
+<dev-welcome  [language]="language"></dev-welcome>
+<div class="row">
+    <div class="col-sm">
+        <dev-item-list [language]="language" (itemSelected)="item =$event"></dev-item-list>
+    </div>
+    <div class="col-sm">
+        <dev-item-details [language]="language" [item]="item"></dev-item-details>
+    </div>
+</div>
+
