@@ -10,5 +10,6 @@ export const en = {
     "description-text": "Description: ",
     "available-text": "On Stock",
     "not-available-text": "Out of Stok!",
-    "checkbox-available": "Show only available: "
+    "checkbox-available": "Show only available: ",
+    "filter-by-text": "Filter by text: "
 }

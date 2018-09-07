@@ -11,5 +11,7 @@ export const va = {
     "description-text": "Descripció: ",
     "available-text": "Disponible",
     "not-available-text": "Agotat!",
-    "checkbox-available": "Mostrar sols els disponibles: "
+    "checkbox-available": "Mostrar sols els disponibles: ",
+    "filter-by-text": "Filtrar per text: "
+
 }

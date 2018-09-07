@@ -1,7 +1,6 @@
-<div class="container" *ngIf="item">
-    <h3>{{ 'item-detail-title' | translate : language}}</h3>
-    <div class="row">
-      <div class="card" style="width: 18rem;">
+  <div class="container" >
+        <div class="card" style="width: 18rem;">
+          <h3>{{ 'item-detail-title' | translate : language}}</h3>
           <img class="card-img-top" src= "{{item.img}}" />
           <div class="card-body">
             <p class="card-text">{{ 'name-text' | translate : language }} {{item.name}}</p>

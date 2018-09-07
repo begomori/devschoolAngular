@@ -10,4 +10,10 @@ export class AppComponent {
     title = 'devschool';
     language: string;
     item: Item;
+    selectedLink: string;
+
+  selectedItem(item: Item) {
+    this.selectedLink = 'item';
+    this.item = item;
+  }
 }

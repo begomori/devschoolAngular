@@ -10,12 +10,14 @@ import { FilterItemsPipe } from '../filter-pipe/filter-pipe';
 export class ItemListComponent {
 
   items: Item[];
-  @Output() itemSelected: EventEmitter<Item>;
-  @Input() language: string;
   filterAvailable: boolean;
 
+  @Input() language: string;
+  @Output() selectedItem: EventEmitter<Item>;
+
   constructor() {
-    this.itemSelected = new EventEmitter();
+
+    this.selectedItem = new EventEmitter();
     this.items = [
       {
         id: 1,
@@ -46,9 +48,9 @@ export class ItemListComponent {
       },
     ];
   }
-
-  onSelectedItem(item: Item) {
-    this.itemSelected.emit(item);
+  
+  itemSelected(item: Item) {
+    this.selectedItem.emit(item);
   }
 
 }

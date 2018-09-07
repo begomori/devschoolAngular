@@ -11,5 +11,6 @@ export const es = {
     "description-text": "Descripción: ",
     "available-text": "Disponible",
     "not-available-text": "Agotado!",
-    "checkbox-available": "Mostrar sólo disponibles: "
+    "checkbox-available": "Mostrar sólo disponibles: ",
+    "filter-by-text": "Filtrar por texto: "
 }

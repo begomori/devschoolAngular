@@ -9,7 +9,7 @@
   </span>
   <div class="row">
         <ul class="list-group-item">
-          <li class="list-group-item" *ngFor="let item of items | filterItems: filterActive : filterText" [class.disabled]="!item.available" (click)="onSelectedItem(item)">
+          <li class="list-group-item" *ngFor="let item of items | filterItems: filterActive : filterText" [class.disabled]="!item.available"  (click)="itemSelected(item)">
               <span>{{item.name}} </span>
           </li>
         </ul>
