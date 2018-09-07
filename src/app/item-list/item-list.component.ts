@@ -2,6 +2,7 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Output, Input } from '@angular/core';
 import { Item } from '../interface/item';
 import { FilterItemsPipe } from '../filter-pipe/filter-pipe';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'dev-item-list',
@@ -12,11 +13,10 @@ export class ItemListComponent {
   items: Item[];
   filterAvailable: boolean;
 
-  @Input() language: string;
+  //@Input() language: string;
   @Output() selectedItem: EventEmitter<Item>;
 
   constructor() {
-
     this.selectedItem = new EventEmitter();
     this.items = [
       {
@@ -49,6 +49,11 @@ export class ItemListComponent {
     ];
   }
   
+  onInit(){
+
+  }
+
+
   itemSelected(item: Item) {
     this.selectedItem.emit(item);
   }

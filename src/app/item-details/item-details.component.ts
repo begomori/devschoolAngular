@@ -7,7 +7,7 @@ import { Item } from '../interface/item';
 })
 export class ItemDetailsComponent {
   @Input() item: Item;
-  @Input() language: string;
+ // @Input() language: string;
  
   constructor() {
    }

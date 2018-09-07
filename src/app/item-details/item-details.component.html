@@ -1,13 +1,13 @@
   <div class="container" >
         <div class="card" style="width: 18rem;">
-          <h3>{{ 'item-detail-title' | translate : language}}</h3>
+          <h3>{{ 'item-detail-title' | translate }}</h3>
           <img class="card-img-top" src= "{{item.img}}" />
           <div class="card-body">
-            <p class="card-text">{{ 'name-text' | translate : language }} {{item.name}}</p>
-            <p class="card-text"> {{ 'description-text' |  translate : language }} {{item.description}}</p>
-            <p  class="card-text"> {{ 'price-text' |  translate : language }} {{ item.price | currency : item.currency }}</p>
-            <p class="card-text" style="color: red;" *ngIf="!item.available"> {{ 'not-available-text' |  translate : language }}</p>
-            <p class="card-text" style="color: green;" *ngIf="item.available"> {{ 'available-text' |  translate : language }}</p>
+            <p class="card-text">{{ 'name-text' | translate }} {{item.name}}</p>
+            <p class="card-text"> {{ 'description-text' |  translate }} {{item.description}}</p>
+            <p  class="card-text"> {{ 'price-text' |  translate }} {{ item.price | currency : item.currency }}</p>
+            <p class="card-text" style="color: red;" *ngIf="!item.available"> {{ 'not-available-text' |  translate }}</p>
+            <p class="card-text" style="color: green;" *ngIf="item.available"> {{ 'available-text' |  translate  }}</p>
           </div>
     </div>
 </div>

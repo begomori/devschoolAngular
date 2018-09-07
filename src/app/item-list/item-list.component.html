@@ -1,10 +1,10 @@
 <div class="container">
-  <h3>{{ 'items-list' | translate : language}}</h3>
-  <div>{{ 'checkbox-available' | translate : language }}
+  <h3>{{ 'items-list' | translate }}</h3>
+  <div>{{ 'checkbox-available' | translate }}
       <input type="checkbox" [(ngModel)]="filterActive" />
   </div>
   <span>
-      Filtar por texto:
+      {{ 'filter-by-text' | translate }}
     <input type="text" [(ngModel)]="filterText">
   </span>
   <div class="row">

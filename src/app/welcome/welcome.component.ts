@@ -6,8 +6,8 @@ import { LanguageService } from '../language.service';
   template:
     `
   <div class="jumbotron">
-    <h1 class="text-center">{{ 'welcome' | translate: this.lenguageService.getLanguage() }}</h1>
-    <p class="text-center">{{ 'intro' | translate: this.lenguageService.getLanguage() }}</p>
+    <h1 class="text-center">{{ 'welcome' | translate }}</h1>
+    <p class="text-center">{{ 'intro' | translate}}</p>
   </div>
   `
 })

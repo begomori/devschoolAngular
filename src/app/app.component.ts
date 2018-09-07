@@ -8,7 +8,6 @@ import { Item } from './interface/item';
 })
 export class AppComponent {
     title = 'devschool';
-    language: string;
     item: Item;
     selectedLink: string;
 
