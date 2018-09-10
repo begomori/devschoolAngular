@@ -12,6 +12,9 @@ export const va = {
     "available-text": "Disponible",
     "not-available-text": "Agotat!",
     "checkbox-available": "Mostrar sols els disponibles: ",
-    "filter-by-text": "Filtrar per text: "
+    "filter-by-text": "Filtrar per text: ",
+    "your-cart": "La teua cistella: ",
+    "no-items": "La teua cistella està buida :(",
+    "add-cart": "Afegir"
 
 }

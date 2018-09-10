@@ -11,5 +11,9 @@ export const en = {
     "available-text": "On Stock",
     "not-available-text": "Out of Stok!",
     "checkbox-available": "Show only available: ",
-    "filter-by-text": "Filter by text: "
+    "filter-by-text": "Filter by text: ",
+    "your-cart": "Your item cart: ",
+    "no-items": "Your cart is empty :(",
+    "add-cart": "Add"
+
 }

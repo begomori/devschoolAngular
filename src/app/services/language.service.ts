@@ -7,7 +7,7 @@ export class LanguageService {
 private _language: string;
 
   constructor() {
-    this._language = 'es';
+    this._language = 'es'; // por defecto se pone en español el idioma
    }
 
    getLanguage(): string {

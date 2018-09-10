@@ -1,0 +1,49 @@
+{
+  "items": [
+{
+        "id": 1,
+        "name": "Dragon Quest XI (PS4)",
+        "description": "El juego JRPG definitivo que todos esperábamos",
+        "price": 65.95,
+        "currency": "EUR",
+        "available": true,
+        "img": "https://cdn.shopify.com/s/files/1/0358/4693/products/DRAGON_QUEST_grande.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Zelda Ocarina of Time (n64)",
+        "description": "El mejor videojuego de la historia en su plataforma original.",
+        "price": 99.99,
+        "currency": "USD",
+        "available": false,
+        "img": "https://i.ebayimg.com/04/!!e!T)qQBWM~$(KGrHqQOKjQE0jn!4Z2qBNP2R6dCK!~~_35.JPG?set_id=89040003C1"
+      },
+      {
+        "id": 3,
+        "name": "Nendoroid Lina Inverse",
+        "description": "Figura con muchas partes intercambiables, la protagonista de Slayers",
+        "price": 30.45,
+        "currency": "GBP",
+        "available": true,
+        "img": "https://www.zaitama.com/wp-content/uploads/Slayers-Nendoroid-Lina-Inverse-5.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Marvel's Spider-man (PS4)",
+        "description": "El juego definitivo de tu querido vecino Spiderman",
+        "price": 69.99,
+        "currency": "EUR",
+        "available": true,
+        "img": "https://image.smythstoys.com/original/desktop/154087.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Fallout 76 - Power Armor Edition",
+        "description": "La nueva entrega de la saga Fallout edición coleccionista con su casco de servoarmadura y otros extras",
+        "price": 200.00,
+        "currency": "USD",
+        "available": false,
+        "img": "https://images.offerup.com/8wQplMXPvENcYnCh2s0Hs36s1Xg=/600x403/fb19/fb19df7e3a7945fc84c57a213e5aa579.jpg"
+      }
+  ]
+}

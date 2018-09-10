@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container my-3">
   <h3>{{ 'items-list' | translate }}</h3>
   <div>{{ 'checkbox-available' | translate }}
       <input type="checkbox" [(ngModel)]="filterActive" />
@@ -8,8 +8,8 @@
     <input type="text" [(ngModel)]="filterText">
   </span>
   <div class="row">
-        <ul class="list-group-item">
-          <li class="list-group-item" *ngFor="let item of items | filterItems: filterActive : filterText" [class.disabled]="!item.available"  (click)="itemSelected(item)">
+        <ul class="list-group-item border-0">
+          <li class="list-group-item" *ngFor="let item of items$ | async | filterItems: filterActive : filterText" [class.disabled]="!item.available"  (click)="itemSelected(item)">
               <span>{{item.name}} </span>
           </li>
         </ul>

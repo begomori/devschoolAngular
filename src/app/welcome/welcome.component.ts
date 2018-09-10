@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'dev-welcome',
@@ -12,10 +12,8 @@ import { LanguageService } from '../language.service';
   `
 })
 export class WelcomeComponent {
-  // nos entra la información del lenguaje desde el componente language-selector, que tiene un emiter
-  @Input() language: string;
 
-  constructor(private lenguageService: LanguageService){
+  constructor(){
 
   }
 }

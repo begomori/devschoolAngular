@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { es } from './lang-es';
 import { en } from './lang-en';
 import { va } from './lang-va';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../services/language.service';
 
 @Pipe({
   name: 'translate',

@@ -12,5 +12,8 @@ export const es = {
     "available-text": "Disponible",
     "not-available-text": "Agotado!",
     "checkbox-available": "Mostrar sólo disponibles: ",
-    "filter-by-text": "Filtrar por texto: "
+    "filter-by-text": "Filtrar por texto: ",
+    "your-cart": "Tu cesta de compra: ",
+    "no-items": "Tu cesta está vacía :(",
+    "add-cart": "Añadir"
 }

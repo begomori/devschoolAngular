@@ -3,4 +3,5 @@
 <div class="container">
     <dev-item-list  (selectedItem)="selectedItem($event)" *ngIf="selectedLink === 'list'"></dev-item-list>
     <dev-item-details  *ngIf="selectedLink === 'item'" [item]="item" ></dev-item-details>
+    <dev-cart *ngIf="selectedLink === 'cart'"></dev-cart>
 </div>
