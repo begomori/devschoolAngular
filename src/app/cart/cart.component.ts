@@ -8,8 +8,9 @@ import { Observable } from 'rxjs';
   templateUrl: './cart.component.html'
 })
 export class CartComponent implements OnInit {
-
-  items$: Observable<Cart[]>;
+  
+  items: Cart[];
+  items$: Observable<Cart[]>; //observable
 
   constructor(private cartService: CartService) {
     this.items$ = this.cartService.getItems();
@@ -18,22 +19,25 @@ export class CartComponent implements OnInit {
   ngOnInit() {
   }
 
-  getTotalAmount(items: Cart[]): number {
-    return items.reduce((acc: number, item: Cart) => {
-      return acc + item.quantity * item.price;
-    }, 0);
-  }
 
   remove(id: number) {
     this.cartService.removeItem(id);
+    //this.items$ = this.cartService.getItems(); // no se si hará falta para refrescar los items actuales después de borrar si ahora usamos obersvables..
   }
 
-  downQuantity(id: number) {
-    this.cartService.minus(id);
+  minus(id: number) {
+    this.cartService.disminuir(id);
   }
 
-  upQuantity(id: number) {
-    this.cartService.plus(id);
+  moar(id: number) {
+    this.cartService.aumentar(id);
   }
 
+  // metodo para sumar el total del carrito de la compra
+  getTotalAmount(items: Cart[]) : number {
+    // método reduce de javascript nos devuelve la suma de numeros (price) del array
+      return items.reduce((total: number, item: Cart) => {
+        return total + item.quantity * item.price;
+      }, 0);
+  }
 }

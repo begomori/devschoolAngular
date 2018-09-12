@@ -5,6 +5,7 @@ import { FilterItemsPipe } from '../filter-pipe/filter-pipe';
 import { LanguageService } from '../services/language.service';
 import { ItemsService } from '../services/items.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'dev-item-list',
@@ -15,11 +16,8 @@ export class ItemListComponent implements OnInit {
   items$: Observable<Item[]>;
   filterAvailable: boolean;
 
-  //@Input() language: string;
-  @Output() selectedItem: EventEmitter<Item>;
 
-  constructor(private itemsService: ItemsService) {
-    this.selectedItem = new EventEmitter();
+  constructor(private itemsService: ItemsService, private router: Router) {
     this.items$ = this.itemsService.getItemList();
   }
   
@@ -27,7 +25,7 @@ export class ItemListComponent implements OnInit {
   }
 
   itemSelected(item: Item) {
-    this.selectedItem.emit(item);
+    this.router.navigate(['/items/'+ item.id]);
   }
 
 }

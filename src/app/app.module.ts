@@ -10,6 +10,28 @@ import { TranslatePipe } from './translate/translate-pipe';
 import { FilterItemsPipe } from './filter-pipe/filter-pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ItemResolver } from './item-resolver.service';
+import { ItemsService } from './services/items.service';
+const appRoutes: Routes = [
+  { path: 'welcome', component: WelcomeComponent },
+  { path: 'cart', component: CartComponent},
+  { path: 'items/:id', component: ItemDetailsComponent,
+    resolve: {
+      item: ItemResolver
+    } 
+  },
+  {
+    path: 'list',
+    component: ItemListComponent,
+    data: { title: 'Item List' }
+  },
+  { path: '',
+    redirectTo: '/welcome',
+    pathMatch: 'full'
+  },
+  //{ path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   declarations: [
@@ -20,12 +42,17 @@ import { CartComponent } from './cart/cart.component';
     ItemDetailsComponent,
     TranslatePipe,
     FilterItemsPipe,
-    CartComponent,
+    CartComponent
   ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule
+    BrowserModule, FormsModule, HttpClientModule,
+    RouterModule.forRoot(
+      appRoutes),
   ],
-  providers: [],
+  providers: [
+    ItemsService,
+    ItemResolver
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

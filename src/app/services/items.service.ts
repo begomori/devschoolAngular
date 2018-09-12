@@ -13,4 +13,9 @@ export class ItemsService {
   getItemList(): Observable<Item[]> {
     return this.http.get<Item[]>('http://localhost:3000/items');
   }
+
+  getItem(id:number): Observable<Item> {
+    return this.http.get<Item>('http://localhost:3000/items/' + id);
+  }
+
 }

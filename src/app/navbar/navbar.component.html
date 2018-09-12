@@ -3,7 +3,7 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav">
         <li class="nav-item" [ngClass]="{active: link === selected}" *ngFor="let link of links">
-          <a class="nav-link" (click)="select(link)"> {{ link }} 
+          <a class="nav-link" [routerLink]="link"> {{ link }} 
             <span *ngIf="link === 'cart'">
                [ {{ cartLength }} ]
             </span>

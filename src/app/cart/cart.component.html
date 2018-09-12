@@ -14,7 +14,7 @@
         <div>
           <div class="form-row">
             <div class="col-4 text-right">
-              <button type="button" class="btn btn-sm" (click)="downQuantity(item.id)" [disabled]="item.quantity === 0">
+              <button type="button" class="btn btn-sm" (click)="minus(item.id)" [disabled]="item.quantity === 0">
                 -
               </button>
             </div>
@@ -22,7 +22,7 @@
               <input name="quantity" class="form-control form-control-sm" type="number" placeholder="0" [(ngModel)]="item.quantity">
             </div>
             <div class="col-4 text-left">
-              <button type="button" class="btn  btn-sm" (click)="upQuantity(item.id)" [disabled]="item.stock === 0"> +
+              <button type="button" class="btn  btn-sm" (click)="moar(item.id)" [disabled]="item.stock === 0"> +
               </button>
             </div>
           </div>

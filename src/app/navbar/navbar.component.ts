@@ -17,7 +17,7 @@ export class NavbarComponent implements OnDestroy {
   selectedLanguage: string; //selecciono idioma de la lista
   cartLength = 0;
   private subscription: Subscription;
-  
+
   // al cambiar el selector, enviar el idioma a los demás componentes
   @Output() languageSelected = new EventEmitter<string>();
   // pincho link para esconder un componente u otro!
@@ -35,11 +35,12 @@ export class NavbarComponent implements OnDestroy {
       { key: 'va', value: 'Valencià' },
     ]
 
-    this.subscription = this.cartService.getItems().pipe(map((items: Cart[]) => {
-        return items.map(i => i.quantity).reduce((acc, quantity) => acc + quantity, 0);
+    this.subscription = this.cartService.getItems().pipe(
+      map((items: Cart[]) => {
+        return items.map(i => i.quantity).reduce((total, quantity) => total + quantity, 0);
       }
       )).subscribe(totals => this.cartLength = totals);
-  }
+    }
 
   ngOnDestroy() {
     if (this.subscription) {
@@ -49,7 +50,6 @@ export class NavbarComponent implements OnDestroy {
 
   // funcion para cambiar el lenguaje!
   onChange() {
-    //this.languageSelected.emit(this.selectedLanguage);
     this.lenguageService.setLanguage(this.selectedLanguage);
   }
 
