@@ -2,18 +2,21 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Item } from '../interface/item';
 import { CartService } from '../services/cart.service';
 import { ActivatedRoute } from '@angular/router';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { PopoverModule } from 'ngx-bootstrap/popover';
+
 @Component({
   selector: 'dev-item-details',
   templateUrl: './item-details.component.html'
 })
 export class ItemDetailsComponent implements OnInit{
   //@Input() item: Item; // hay que quitar los inputs y outputs
-  //@Input() language: string;
-  
   item:Item;
 
   constructor(private cartService: CartService, private route: ActivatedRoute) {
     const id = this.route.snapshot.params.id;
+    
    }
 
    
@@ -24,6 +27,7 @@ export class ItemDetailsComponent implements OnInit{
 
    addToCart() {
     this.cartService.addItem(this.item);
+   
   }
 
   removeFromCart() {

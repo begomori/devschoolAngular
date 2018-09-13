@@ -5,6 +5,7 @@ import { CartService } from '../services/cart.service';
 import { map } from 'rxjs/operators';
 import { Cart } from '../interface/cart';
 import { Subscription } from 'rxjs';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'dev-navbar',
@@ -24,8 +25,8 @@ export class NavbarComponent implements OnDestroy {
   @Output() selectedChange: EventEmitter<string>; // envio el componente seleccionado al componente de item-list
   @Input() selected: string; // tengo que saber cuando pincho un item, se oculta el otro componente
 
-  constructor(private lenguageService: LanguageService, private cartService: CartService) {
-    this.links = ['welcome', 'list', 'cart'];
+  constructor(private lenguageService: TranslateService, private cartService: CartService) {
+    this.links = ['welcome', 'login', 'list', 'cart'];
     this.selectedChange = new EventEmitter();
     this.selected = this.links[0];
 
@@ -49,8 +50,9 @@ export class NavbarComponent implements OnDestroy {
   }
 
   // funcion para cambiar el lenguaje!
-  onChange() {
-    this.lenguageService.setLanguage(this.selectedLanguage);
+  onChange(selectedLanguage: string) {
+    this.languageSelected.emit(selectedLanguage);
+    // o se puede usar el service
   }
 
   // función para saber qué link pincho y el componente que tiene que mostrarse

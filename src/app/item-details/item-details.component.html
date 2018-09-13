@@ -16,11 +16,13 @@
           <div>
               <div class="row">
                 <div class="col-9">
-                  <button type="button" class="btn btn-block" (click)="addToCart()"  [ngStyle]="{'background-color': 'black', 'color': 'white'}">
+                  <button type="button" class="btn btn-block" (click)="addToCart()"  [ngStyle]="{'background-color': 'black', 'color': 'white'}" 
+                    popover="Added!" triggers="focus">
                     {{ 'add-cart' | translate }} </button>
                 </div>
                 <div class="col-3">
-                  <button type="button" class="btn btn-md" (click)="removeFromCart()" [ngStyle]="{'background-color': 'white'}">
+                  <button type="button" class="btn btn-md" (click)="removeFromCart()" [ngStyle]="{'background-color': 'white'}"
+                  popover="Removed!" triggers="focus">
                       <img src="https://image.freepik.com/free-icon/trash-bin-symbol_318-10194.jpg" height="25px" width="25px"/>
                   </button>
                 </div>

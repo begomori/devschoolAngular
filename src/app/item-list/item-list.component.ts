@@ -15,7 +15,7 @@ export class ItemListComponent implements OnInit {
   
   items$: Observable<Item[]>;
   filterAvailable: boolean;
-
+  filterActive: boolean;
 
   constructor(private itemsService: ItemsService, private router: Router) {
     this.items$ = this.itemsService.getItemList();

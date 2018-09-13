@@ -1,4 +1,4 @@
-<dev-navbar (languageSelected)="language = $event" [(selected)]="selectedLink"></dev-navbar>
+<dev-navbar (languageSelected)="onLanguageChange($event)" [(selected)]="selectedLink"></dev-navbar>
 <!-- <dev-welcome *ngIf="selectedLink === 'welcome'"></dev-welcome>
 <div class="container">
     <dev-item-list  (selectedItem)="selectedItem($event)" *ngIf="selectedLink === 'list'"></dev-item-list>

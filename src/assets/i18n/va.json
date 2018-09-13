@@ -1,5 +1,4 @@
-// TEXTOS EN VALENCIANO
-export const va = {
+{
     "welcome": "¡Benvinguts a DevShop!",
     "intro": "On pots comprar qualsevol cosa que imaginis",
     "items-list": "Llista d'items",
@@ -16,5 +15,4 @@ export const va = {
     "your-cart": "La teua cistella: ",
     "no-items": "La teua cistella està buida :(",
     "add-cart": "Afegir"
-
 }

@@ -6,32 +6,25 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
-import { TranslatePipe } from './translate/translate-pipe';
 import { FilterItemsPipe } from './filter-pipe/filter-pipe';
-import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
-import { RouterModule, Routes } from '@angular/router';
-import { ItemResolver } from './item-resolver.service';
-import { ItemsService } from './services/items.service';
-const appRoutes: Routes = [
-  { path: 'welcome', component: WelcomeComponent },
-  { path: 'cart', component: CartComponent},
-  { path: 'items/:id', component: ItemDetailsComponent,
-    resolve: {
-      item: ItemResolver
-    } 
-  },
-  {
-    path: 'list',
-    component: ItemListComponent,
-    data: { title: 'Item List' }
-  },
-  { path: '',
-    redirectTo: '/welcome',
-    pathMatch: 'full'
-  },
-  //{ path: '**', component: PageNotFoundComponent }
-];
+import { ItemResolver } from './services/item-resolver.service';
+import { LoginComponent } from './login/login.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { AuthGuard } from './services/auth-guard.service';
+import { LoginService } from './services/login.service';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { PopoverModule } from 'ngx-bootstrap/popover';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { AppRoutingModule }     from './app-routing.module';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -40,18 +33,31 @@ const appRoutes: Routes = [
     WelcomeComponent,
     ItemListComponent,
     ItemDetailsComponent,
-    TranslatePipe,
     FilterItemsPipe,
-    CartComponent
+    CartComponent,
+    LoginComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
-    RouterModule.forRoot(
-      appRoutes),
+    AppRoutingModule,
+    //RouterModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+        }
+      }),
+      TooltipModule.forRoot(),
+      PopoverModule.forRoot(),
+      ModalModule.forRoot(),
+      AppRoutingModule
   ],
   providers: [
-    ItemsService,
-    ItemResolver
+    ItemResolver,
+    AuthGuard,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

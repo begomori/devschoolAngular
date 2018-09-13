@@ -10,7 +10,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <select [(ngModel)]="selectedLanguage" (change)="onChange()">
+          <select [(ngModel)]="selectedLanguage" (change)="onChange(selectedLanguage)">
           <option *ngFor="let idioma of idiomas" [ngValue]="idioma.key">{{idioma.value}}</option>
         </select>
         </li>
