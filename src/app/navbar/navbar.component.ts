@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnDestroy } from '@angular/core';
 import { Output } from '@angular/core';
-import { LanguageService } from '../services/language.service';
 import { CartService } from '../services/cart.service';
 import { map } from 'rxjs/operators';
 import { Cart } from '../interface/cart';

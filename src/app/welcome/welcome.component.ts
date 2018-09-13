@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'dev-welcome',

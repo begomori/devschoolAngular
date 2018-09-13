@@ -1,8 +1,5 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
-import { Output, Input } from '@angular/core';
 import { Item } from '../interface/item';
-import { FilterItemsPipe } from '../filter-pipe/filter-pipe';
-import { LanguageService } from '../services/language.service';
 import { ItemsService } from '../services/items.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
