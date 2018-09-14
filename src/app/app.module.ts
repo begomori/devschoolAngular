@@ -15,8 +15,6 @@ import { PopoverModule } from 'ngx-bootstrap/popover';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppRoutingModule }     from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
-import { ItemResolver } from './services/item-resolver.service';
-import { ItemListComponent } from './item-list/item-list.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -35,7 +33,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
     AppRoutingModule,
-    //RouterModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

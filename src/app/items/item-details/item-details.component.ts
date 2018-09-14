@@ -1,10 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Item } from '../interface/item';
-import { CartService } from '../services/cart.service';
+import { Item } from '../../interface/item';
+import { CartService } from '../../services/cart.service';
 import { ActivatedRoute } from '@angular/router';
-import { BsModalService } from 'ngx-bootstrap/modal';
-import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
-import { PopoverModule } from 'ngx-bootstrap/popover';
 
 @Component({
   selector: 'dev-item-details',
