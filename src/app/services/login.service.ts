@@ -3,7 +3,7 @@ import { User } from '../interface/user';
 import { of, Observable } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class LoginService {
 
   private logged: boolean;

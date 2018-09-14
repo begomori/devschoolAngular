@@ -22,7 +22,7 @@ export class ItemListComponent implements OnInit {
   }
 
   itemSelected(item: Item) {
-    this.router.navigate(['/items/'+ item.id]);
+    this.router.navigate(['/list/'+ item.id]);
   }
 
 }
